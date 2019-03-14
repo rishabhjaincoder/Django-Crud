@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Update Student Record</h1>
+
+	<form method="post">
+		{% csrf_token %}
+		Name : <input type="text" name="{{student.name}}"> <br>
+		Gender : <input type="radio" name="gender" value="Male"> Male <input type="radio" name="gender" value="{{student.dob}}"> Female <br>
+		DOB : <input type="text" name="{{student.gender}}"> <br>
+		Address : <input type="text" name="{{student.address}}"> <br>
+		Email : <input type="text" name="{{student.email}}"> <br>
+		Phone : <input type="text" name="{{student.phone}}"> <br>
+		<input type="submit" value="Update Student Record">
+	</form>
+</body>
+</html>

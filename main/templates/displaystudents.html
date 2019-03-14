@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>All Student Records</h1>
+
+	<table>
+		<tr>
+			<td>Id</td>
+			<td>Name</td>
+			<td>Gender</td>
+			<td>DOB</td>
+			<td>Email</td>
+			<td>Phone</td>
+			<td>Address</td>
+			<td>Command</td>
+		</tr>
+
+		{% for s in students %}
+		<tr>
+			<td>{{s.id}}</td>
+			<td>{{s.name}}</td>
+			<td>{{s.gender}}</td>
+			<td>{{s.dob}}</td>
+			<td>{{s.email}}</td>
+			<td>{{s.phone}}</td>
+			<td>{{s.address}}</td>
+			<td>
+				<a href="/student/delete/{{s.id}}/">Delete</a> |
+				<a href="/student/update/{{s.id}}/">Update</a> 
+			</td>
+		</tr>
+		{% endfor %}
+
+
+	</table>
+
+	<h2><a href="/student/add/">Click here to add a new record</h2>
+</body>
+</html>
