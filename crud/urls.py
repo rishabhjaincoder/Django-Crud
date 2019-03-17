@@ -20,7 +20,7 @@ from main import views as main
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('student/add/',main.addstudent),
-    path('',main.displaystudents),
+    path('students/',main.displaystudents),
     path('student/display/<int:id>/',main.displaystudent),
     path('student/update/<int:id>/',main.updatestudent),
     path('student/delete/<int:id>/',main.deletestudent)

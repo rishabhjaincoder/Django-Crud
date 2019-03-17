@@ -8,12 +8,13 @@
 
 	<form method="post">
 		{% csrf_token %}
-		Name : <input type="text" name="{{student.name}}"> <br>
-		Gender : <input type="radio" name="gender" value="Male"> Male <input type="radio" name="gender" value="{{student.dob}}"> Female <br>
-		DOB : <input type="text" name="{{student.gender}}"> <br>
-		Address : <input type="text" name="{{student.address}}"> <br>
-		Email : <input type="text" name="{{student.email}}"> <br>
-		Phone : <input type="text" name="{{student.phone}}"> <br>
+		Name : <input type="text" name="name" value="{{student.name}}"> <br>
+		Gender : <input type="radio" name="gender" value="{{student.gender}}"> Male 
+		<input type="radio" name="gender" value="{{student.gender}}"> Female <br>
+		DOB : <input type="text" name="dob" value="{{student.dob}}"> <br>
+		Address : <input type="text" name="address" value="{{student.address}}"> <br>
+		Email : <input type="text" name="email" value="{{student.email}}"> <br>
+		Phone : <input type="text" name="phone" value="{{student.phone}}"> <br>
 		<input type="submit" value="Update Student Record">
 	</form>
 </body>
